@@ -31,11 +31,27 @@ GLfloat lastTime = 0.0f;
 static double limitFPS = 1.0 / 60.0;
 Camera camera;
 Window mainWindow;
-vector<Mesh*> meshList;
+vector<Mesh*> meshList; //Almacena Cubo, Piramide triangular, cilindro, cono, piramide cuadrangular
 vector<Shader>shaderList;
 //Vertex Shader
 static const char* vShader = "shaders/shader.vert";
 static const char* fShader = "shaders/shader.frag";
+
+static const char* vShaderBlue = "shaders/shaderBlue.vert";
+static const char* fShaderBlue = "shaders/shaderBlue.frag";
+
+static const char* vShaderGreenSoft = "shaders/shaderGreenSoft.vert";
+static const char* fShaderGreenSoft = "shaders/shaderGreenSoft.frag";
+
+static const char* vShaderGreenStrong = "shaders/shaderGreenStrong.vert";
+static const char* fShaderGreenStrong = "shaders/shaderGreenStrong.frag";
+
+static const char* vShaderBrown = "shaders/shaderBrown.vert";
+static const char* fShaderBrown = "shaders/shaderBrown.frag";
+
+static const char* vShaderRed = "shaders/shaderRed.vert";
+static const char* fShaderRed = "shaders/shaderRed.frag";
+
 static const char* vShaderColor = "shaders/shadercolor.vert";
 Sphere sp = Sphere(1.0, 20, 20); //recibe radio, slices, stacks
 
@@ -279,6 +295,26 @@ void CreateShaders()
 	shader1->CreateFromFiles(vShader, fShader);
 	shaderList.push_back(*shader1);
 
+	Shader* shader10 = new Shader(); 
+	shader10->CreateFromFiles(vShaderBlue, fShaderBlue);
+	shaderList.push_back(*shader10);
+
+	Shader* shader11 = new Shader(); 
+	shader11->CreateFromFiles(vShaderGreenSoft, fShaderGreenSoft);
+	shaderList.push_back(*shader11);
+
+	Shader* shader12 = new Shader(); 
+	shader12->CreateFromFiles(vShaderGreenStrong, fShaderGreenStrong);
+	shaderList.push_back(*shader12);
+
+	Shader* shader13 = new Shader(); 
+	shader13->CreateFromFiles(vShaderBrown, fShaderBrown);
+	shaderList.push_back(*shader13);
+
+	Shader* shader14 = new Shader(); 
+	shader14->CreateFromFiles(vShaderRed, fShaderRed);
+	shaderList.push_back(*shader14);
+
 	Shader* shader2 = new Shader();
 	shader2->CreateFromFiles(vShaderColor, fShader);
 	shaderList.push_back(*shader2);
@@ -366,12 +402,13 @@ int main()
 		glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color)); //para cambiar el color del objetos
-		//meshList[0]->RenderMesh(); //dibuja cubo y pirámide triangular
-		//meshList[2]->RenderMeshGeometry(); //dibuja las figuras geométricas cilindro, cono, pirámide base cuadrangular
-		sp.render(); //dibuja esfera
+		// Cubo(0), Piramide triangular(1), cilindro(2), cono(3), piramide cuadrangular(4)
+		//meshList[4]->RenderMesh(); // Cubo(0), Piramide triangular(1), cilindro(2), cono(3), piramide cuadrangular(4)
+		meshList[2]->RenderMeshGeometry(); //dibuja las figuras geométricas cilindro, cono, pirámide base cuadrangular
+		//sp.render(); //dibuja esfera
 		
 		
-		
+		/*
 		//ejercicio: Instanciar primitivas geométricas para recrear el dibujo de la práctica pasada en 3D,
 		//se requiere que exista piso y la casa tiene una ventana azul circular justo en medio de la pared trasera y solo 1 puerta frontal.
 		model = glm::mat4(1.0f);
@@ -387,6 +424,7 @@ int main()
 		//model = glm::scale(model, glm::vec3(0.5f, 0.5f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
 		meshList[3]->RenderMeshGeometry();
+		*/
 		
 
 		glUseProgram(0);
