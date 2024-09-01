@@ -36,22 +36,6 @@ vector<Shader>shaderList;
 //Vertex Shader
 static const char* vShader = "shaders/shader.vert";
 static const char* fShader = "shaders/shader.frag";
-
-static const char* vShaderBlue = "shaders/shaderBlue.vert";
-static const char* fShaderBlue = "shaders/shaderBlue.frag";
-
-static const char* vShaderGreenSoft = "shaders/shaderGreenSoft.vert";
-static const char* fShaderGreenSoft = "shaders/shaderGreenSoft.frag";
-
-static const char* vShaderGreenStrong = "shaders/shaderGreenStrong.vert";
-static const char* fShaderGreenStrong = "shaders/shaderGreenStrong.frag";
-
-static const char* vShaderBrown = "shaders/shaderBrown.vert";
-static const char* fShaderBrown = "shaders/shaderBrown.frag";
-
-static const char* vShaderRed = "shaders/shaderRed.vert";
-static const char* fShaderRed = "shaders/shaderRed.frag";
-
 static const char* vShaderColor = "shaders/shadercolor.vert";
 Sphere sp = Sphere(1.0, 20, 20); //recibe radio, slices, stacks
 
@@ -295,25 +279,6 @@ void CreateShaders()
 	shader1->CreateFromFiles(vShader, fShader);
 	shaderList.push_back(*shader1);
 
-	Shader* shader10 = new Shader(); 
-	shader10->CreateFromFiles(vShaderBlue, fShaderBlue);
-	shaderList.push_back(*shader10);
-
-	Shader* shader11 = new Shader(); 
-	shader11->CreateFromFiles(vShaderGreenSoft, fShaderGreenSoft);
-	shaderList.push_back(*shader11);
-
-	Shader* shader12 = new Shader(); 
-	shader12->CreateFromFiles(vShaderGreenStrong, fShaderGreenStrong);
-	shaderList.push_back(*shader12);
-
-	Shader* shader13 = new Shader(); 
-	shader13->CreateFromFiles(vShaderBrown, fShaderBrown);
-	shaderList.push_back(*shader13);
-
-	Shader* shader14 = new Shader(); 
-	shader14->CreateFromFiles(vShaderRed, fShaderRed);
-	shaderList.push_back(*shader14);
 
 	Shader* shader2 = new Shader();
 	shader2->CreateFromFiles(vShaderColor, fShader);
