@@ -67,5 +67,35 @@
     <None Include="shaders\shadercolor.vert">
       <Filter>Archivos de recursos</Filter>
     </None>
+    <None Include="shaders\shaderBlue.frag">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderBlue.vert">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderBrown.frag">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderBrown.vert">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderGreenSoft.frag">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderGreenSoft.vert">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderGreenStrong.frag">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderGreenStrong.vert">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderRed.frag">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="shaders\shaderRed.vert">
+      <Filter>Archivos de recursos</Filter>
+    </None>
   </ItemGroup>
 </Project>

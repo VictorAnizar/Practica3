@@ -151,8 +151,18 @@
   <ItemGroup>
     <None Include="shaders\shader.frag" />
     <None Include="shaders\shader.vert" />
+    <None Include="shaders\shaderBlue.frag" />
+    <None Include="shaders\shaderBlue.vert" />
+    <None Include="shaders\shaderBrown.frag" />
+    <None Include="shaders\shaderBrown.vert" />
     <None Include="shaders\shadercolor.frag" />
     <None Include="shaders\shadercolor.vert" />
+    <None Include="shaders\shaderGreenSoft.frag" />
+    <None Include="shaders\shaderGreenSoft.vert" />
+    <None Include="shaders\shaderGreenStrong.frag" />
+    <None Include="shaders\shaderGreenStrong.vert" />
+    <None Include="shaders\shaderRed.frag" />
+    <None Include="shaders\shaderRed.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
