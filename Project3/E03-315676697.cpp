@@ -368,7 +368,7 @@ int main()
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color)); //para cambiar el color del objetos
 		// Cubo(0), Piramide triangular(1), cilindro(2), cono(3), piramide cuadrangular(4)
 		//meshList[4]->RenderMesh(); // Cubo(0), Piramide triangular(1), cilindro(2), cono(3), piramide cuadrangular(4)
-		meshList[0]->RenderMeshGeometry(); //dibuja las figuras geométricas cilindro, cono, pirámide base cuadrangular
+		meshList[1]->RenderMeshGeometry(); //dibuja las figuras geométricas cilindro, cono, pirámide base cuadrangular
 		//sp.render(); //dibuja esfera
 
 		//Cono techo
